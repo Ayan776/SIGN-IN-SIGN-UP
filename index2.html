@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In / Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .form-group {
+      margin: 10px 0;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .switch-form {
+      text-align: center;
+      margin-top: 10px;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="signin-container">
+    <h1>Sign In</h1>
+    <form id="signin-form">
+      <div class="form-group">
+        <input type="email" placeholder="Email" id="signin-email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" id="signin-password" required>
+      </div>
+      <div class="form-group">
+        <button type="button" onclick="signIn()">Sign In</button>
+      </div>
+    </form>
+    <div class="switch-form">
+      Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="container" id="signup-container" style="display: none;">
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+      <div class="form-group">
+        <input type="text" placeholder="Name" id="signup-name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email" id="signup-email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" id="signup-password" required>
+      </div>
+      <div class="form-group">
+        <button type="button" onclick="signUp()">Sign Up</button>
+      </div>
+      <div class="switch-form">
+        Already have an account? <a href="#" onclick="showSignInForm()">Sign In</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function showSignUpForm() {
+      document.getElementById("signin-container").style.display = "none";
+      document.getElementById("signup-container").style.display = "block";
+    }
+
+    function showSignInForm() {
+      document.getElementById("signin-container").style.display = "block";
+      document.getElementById("signup-container").style.display = "none";
+    }
+
+    function signIn() {
+      alert("Sign In button clicked. Implement sign-in logic.");
+    }
+
+    function signUp() {
+      alert("Sign Up button clicked. Implement sign-up logic.");
+    }
+  </script>
+</body>
+</html>
